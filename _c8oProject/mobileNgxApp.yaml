@@ -62,7 +62,7 @@ componentScriptContent:
         /*Begin_c8o_AppFunction*/
         	/*End_c8o_AppFunction*/
         '
-tplProjectName: mobilebuilder_tpl_8_0_0_ngx
+tplProjectName: lib_CadViewer
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
 ↓CadViewer [ngx.components.UISharedRegularComponent-1650728537529]: 🗏 mobileSharedComponents/CadViewer.yaml
 ↓Page [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
