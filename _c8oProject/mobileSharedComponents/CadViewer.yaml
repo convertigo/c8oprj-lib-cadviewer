@@ -1382,7 +1382,7 @@ scriptContent:
             - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
             - com.twinsoft.convertigo.beans.common.XMLVector: 
               - java.lang.String: 
-                - ↑value: '{ "glob": "**/*", "input": "node_modules/cadviewer/app/images", "output": "assets/cadviewer/app/images" }'
+                - ↑value: '{ "glob": "**/*", "input": "node_modules/cadviewer/app", "output": "assets/cadviewer/app" }'
     package_dependencies: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
