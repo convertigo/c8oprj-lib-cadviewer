@@ -7,6 +7,9 @@
 !/DisplayObjects/mobile/assets
 /DisplayObjects/mobile/assets/css/animate.min.css
 
+/DisplayObjects/mobile/assets/cadviewer
+
+
 # disable this for custom Flashupdate or CI build with Flashupdate
 /Flashupdate
 

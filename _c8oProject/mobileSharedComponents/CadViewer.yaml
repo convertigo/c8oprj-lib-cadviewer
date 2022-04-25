@@ -408,25 +408,12 @@ scriptContent:
         var hatchtype = 0;
         
         
-        // connecting to Servlets Server
-        var ServerBackEndUrl = "http://localhost:8080/cadviewer/";
-        var ServerLocation = "";
         
         
         // connecting to PHP Server
-        var ServerBackEndUrl = "http://localhost/cadviewer/";
+        var ServerBackEndUrl = "http://192.168.99.100:38080/cadviewer/";
         var ServerLocation = "";
-        
-        // Connecting to .NET Server
-        var ServerBackEndUrl = "http://localhost:53737/";
-        var ServerLocation = "";
-        
-        
-        // Standard NodeJS Server
         var ServerUrl = "http://localhost:4200/";
-        var ServerBackEndUrl = "http://localhost:3000/";
-        var ServerLocation = "";
-        
         
         
         var multiSelect = false;    // flag to control multiselect
@@ -714,8 +701,8 @@ scriptContent:
         
         
               // USER Controlled - 
-              cadviewer.cvjs_setHandlers_FrontEnd(''NodeJS'', ''Angular'',''floorPlan'');   // user controlled back-end
-              //cadviewer.cvjs_setHandlers_FrontEnd(''PHP'', ''Angular'',''floorPlan'');
+              // cadviewer.cvjs_setHandlers_FrontEnd(''NodeJS'', ''Angular'',''floorPlan'');   // user controlled back-end
+              cadviewer.cvjs_setHandlers_FrontEnd(''PHP'', ''Angular'',''floorPlan'');
               //cadviewer.cvjs_setHandlers_FrontEnd(''dotNET'', ''Angular'',''floorPlan'');
               //cadviewer.cvjs_setHandlers_FrontEnd(''Servlets'', ''Angular'',''floorPlan'');
         
@@ -869,7 +856,7 @@ scriptContent:
                    // Initialize CADViewer - needs the div name on the svg element on page that contains CADViewerJS and the location of the
                    // And we intialize with the Space Object Custom values
                  //  cadviewer.cvjs_InitCADViewer_highLight_popUp_app("floorPlan", ServerUrl+"app/", cvjsRoomPolygonBaseAttributes, cvjsRoomPolygonHighlightAttributes, cvjsRoomPolygonSelectAttributes, my_cvjsPopUpBody);
-                   cadviewer.cvjs_InitCADViewer_highLight_popUp_app("floorPlan", "/assets/cadviewer/app/", cvjsRoomPolygonBaseAttributes, cvjsRoomPolygonHighlightAttributes, cvjsRoomPolygonSelectAttributes, my_cvjsPopUpBody );
+                   cadviewer.cvjs_InitCADViewer_highLight_popUp_app("floorPlan", "assets/cadviewer/app/", cvjsRoomPolygonBaseAttributes, cvjsRoomPolygonHighlightAttributes, cvjsRoomPolygonSelectAttributes, my_cvjsPopUpBody );
                                
                       
                    // For AngularJS we need a different setting of images, loading from /assets folder	
@@ -1383,6 +1370,35 @@ scriptContent:
             - com.twinsoft.convertigo.beans.common.XMLVector: 
               - java.lang.String: 
                 - ↑value: '{ "glob": "**/*", "input": "node_modules/cadviewer/app", "output": "assets/cadviewer/app" }'
+    build_styles: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/bootstrap.min.css
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/jquery.qtip.min.css
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/jquery-ui-1.11.4.min.css
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/bootstrap-multiselect.css
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/cvjs_6.5.css
     package_dependencies: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector

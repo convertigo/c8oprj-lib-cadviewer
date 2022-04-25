@@ -1,7 +1,7 @@
 ↑convertigo: 8.0.0.m006
 ↓lib_CadViewer [core.Project]: 
   comment: Convertigo Mobile builder Project
-  corsOrigin: =Origin
+  corsOrigin: '*'
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 
     comment: ngx builder template
