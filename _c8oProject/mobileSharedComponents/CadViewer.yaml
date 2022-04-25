@@ -84,3 +84,12 @@ scriptContent:
                 - ↑value: '* as cadviewer'
               - java.lang.String: 
                 - ↑value: cadviewer
+↓Div [ngx.components.UIDynamicElement-1650784154347]: 
+  beanData: '{"ionBean":"DivTag"}'
+  tagName: div
+  ↓Attr [ngx.components.UIAttribute-1650784168619]: 
+    attrName: id
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:floorPlan
