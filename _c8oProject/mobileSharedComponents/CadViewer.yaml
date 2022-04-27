@@ -1409,7 +1409,8 @@ scriptContent:
           }'
 ↓Fragment [ngx.components.UICustom-1650890458724]: 
   htmlTemplate: |
-    '<table>
+    '<!--
+    <table>
     <tr>
         <td>  
             <input style="margin-left: 10px" type="text" id ="singleID" placeholder="Single ID" />
@@ -1482,7 +1483,7 @@ scriptContent:
             </tr>
     </table>
     <br>
-          
+    -->      
     
     <div id="floorPlan">
     </div>'

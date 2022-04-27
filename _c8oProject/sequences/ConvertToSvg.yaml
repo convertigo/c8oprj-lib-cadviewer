@@ -1,0 +1,13 @@
+comment: Uses the AX Converter to Convert DWG drwings to SVG
+↓Process_execute [steps.ProcessExecStep-1651046811060]: 
+  commandLine: '"cmd /c AX2023_W64_23_02_78.exe -i=\"../../data/" + input +  "\" -o=\"../../data/" + output + "\""'
+  executionDirectory: .//axconverter/windows
+↓input [variables.RequestableVariable-1651047000788]: 
+  comment: The input file (relative to the project/data directory)
+↓output [variables.RequestableVariable-1651047010560]: 
+  comment: The output file (relative to the project/data directory)
+↓TestOK [core.TestCase]: 
+  ↓input [variables.TestCaseVariable-1651047031534]: 
+    value: 1st_floor_architectural.dwg
+  ↓output [variables.TestCaseVariable-1651047031536]: 
+    value: cad.svg
