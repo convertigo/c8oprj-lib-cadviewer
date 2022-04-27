@@ -1,0 +1,160 @@
+comment: Upload & Converts a DWG drawing to SVG, then stores it ion the database
+↓Input_variables [steps.InputVariablesStep-1651063435695]: 
+↓jUploadedFile [steps.SimpleSourceStep-1651063545345]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1651063435695
+        - java.lang.String: 
+          - ↑value: ./drawingFile/text()
+  variableName: jUploadedFile
+↓Move_file [steps.MoveStep-1651063506930]: 
+  destinationPath: '".//data"'
+  output: true
+  overwrite: true
+  sourcePath: jUploadedFile
+↓jElement [steps.ElementStep-1651063923714]: 
+  expression: jUploadedFile.substring(jUploadedFile.lastIndexOf("\\") +1 )
+  nodeName: input
+↓jElement1 [steps.ElementStep-1651064056596]: 
+  expression: jUploadedFile.substring(jUploadedFile.lastIndexOf("\\")+1) + ".svg"
+  nodeName: ouput
+↓jElement2 [steps.ElementStep-1651064631105]: 
+  expression: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf("\\")+1) + ".svg"'
+  nodeName: path
+↓Call_Sequence [steps.SequenceStep-1651063742473]: 
+  sourceSequence: lib_CadViewer.ConvertToSvg
+  ↓input [variables.StepVariable-1651063742475]: 
+    comment: The input file (relative to the project/data directory)
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1651063923714
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓output [variables.StepVariable-1651063742477]: 
+    comment: The output file (relative to the project/data directory)
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1651064056596
+          - java.lang.String: 
+            - ↑value: ./text()
+↓Object [steps.JsonObjectStep-1651064440171]: 
+  key: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: drawing
+  ↓Field [steps.JsonFieldStep-1651064461618]: 
+    key: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: name
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: SOURCE
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1651063923714
+            - java.lang.String: 
+              - ↑value: ./text()
+  ↓Field1 [steps.JsonFieldStep-1651064475519]: 
+    key: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: dateUploaded
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: JS
+          - →→: new Date().toISOString()
+  ↓Field2 [steps.JsonFieldStep-1651065041758]: 
+    key: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: type
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: drawing
+↓Call_Transaction [steps.TransactionStep-1651064400014]: 
+  sourceTransaction: lib_CadViewer.lib_cadviewer_fullsync.PostDocument
+  ↓_id [variables.StepVariable-1651064400016]: 
+    description: Document id
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1651063923714
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓data [variables.StepVariable-1651064400018]: 
+    description: Document content
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1651064440171
+          - java.lang.String: 
+            - ↑value: .
+↓Call_Transaction1 [steps.TransactionStep-1651064588852]: 
+  sourceTransaction: lib_CadViewer.lib_cadviewer_fullsync.PutDocumentAttachment
+  ↓_use_docid [variables.StepVariable-1651064588854]: 
+    description: Document ID
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1651063923714
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓_use_attpath [variables.StepVariable-1651064588856]: 
+    description: |
+      Attachment path <br/>
+       This path is either absolute or relative to Convertigo environment. Relative paths starting with:<br/><br/>• <span class="computer">./</span> are relative to Convertigo workspace,<br/>• <span class="computer">.//</span> are relative to current project folder. <br/><br/>
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1651064631105
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓_use_attname [variables.StepVariable-1651064588858]: 
+    description: Attachment name
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1651064056596
+          - java.lang.String: 
+            - ↑value: ./text()
+↓DeleteInputFile [steps.DeleteStep-1651064856056]: 
+  sourcePath: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf("\\") +1 )'
+↓DeleteOutputFile [steps.DeleteStep-1651064905632]: 
+  sourcePath: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf("\\") +1 ) + ".svg"'
+↓drawingFile [variables.RequestableVariable-1651063455602]: 
+  isFileUpload: true

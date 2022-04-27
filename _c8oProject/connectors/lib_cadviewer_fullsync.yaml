@@ -1,0 +1,21 @@
+anonymousReplication: allow
+databaseName: lib_cadviewer_fullsync
+↓GetServerInfo [transactions.couchdb.GetServerInfoTransaction]: 
+  ↑default: true
+↓PostDocument [transactions.couchdb.PostDocumentTransaction]: 
+  fullSyncAclPolicy: anonymous
+  policy: override
+  useHash: true
+  ↓_id [variables.RequestableVariable-1651063398318]: 
+    description: Document id
+  ↓data [variables.RequestableVariable-1651063398320]: 
+    description: Document content
+↓PutDocumentAttachment [transactions.couchdb.PutDocumentAttachmentTransaction]: 
+  ↓_use_docid [variables.RequestableVariable-1651063360013]: 
+    description: Document ID
+  ↓_use_attpath [variables.RequestableVariable-1651063360015]: 
+    description: |
+      Attachment path <br/>
+       This path is either absolute or relative to Convertigo environment. Relative paths starting with:<br/><br/>• <span class="computer">./</span> are relative to Convertigo workspace,<br/>• <span class="computer">.//</span> are relative to current project folder. <br/><br/>
+  ↓_use_attname [variables.RequestableVariable-1651063360017]: 
+    description: Attachment name
