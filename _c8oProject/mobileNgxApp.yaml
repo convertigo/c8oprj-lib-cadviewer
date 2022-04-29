@@ -66,6 +66,7 @@ tplProjectName: lib_CadViewer
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
 ↓CadViewer [ngx.components.UISharedRegularComponent-1650728537529]: 🗏 mobileSharedComponents/CadViewer.yaml
 ↓Page [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
+↓ListDrawingsPage [ngx.components.PageComponent-1651250668801]: 🗏 mobilePages/ListDrawingsPage.yaml
 ↓Style [ngx.components.UIStyle-1491635462437]: 
   comment: You can add some global application styles here
   styleContent: 
@@ -278,3 +279,23 @@ tplProjectName: lib_CadViewer
           }
           
           '
+↓AppEvent [ngx.components.UIAppEvent-1651065412836]: 
+  appEvent: onNetworkReachable
+  ↓SyncData [ngx.components.UIDynamicAction-1651250695922]: 
+    beanData: '{"ionBean":"FullSyncSyncAction","requestable":"plain:lib_CadViewer.lib_cadviewer_fullsync"}'
+    ↓GetAttachmentUrl [ngx.components.UICustomAction-1651250695925]: 
+      actionValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              			let url = page.getAttachmentUrl("hq17_.dwg", "hq17_.dwg.svg", null, "lib_cadviewer_fullsync")
+              			resolve(url);
+              
+      ↓SetLocal [ngx.components.UIDynamicAction-1651250695928]: 
+        beanData: |
+          '{
+           "ionBean": "SetLocalAction",
+           "Property": "plain:imgUrl",
+           "Value": "script:out"
+          }'

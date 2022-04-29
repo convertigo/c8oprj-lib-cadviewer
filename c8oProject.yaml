@@ -2,8 +2,12 @@
 ↓lib_CadViewer [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: '*'
+  ↓lib_cadviewer_fullsync [connectors.FullSyncConnector]: 🗏 connectors/lib_cadviewer_fullsync.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓ConvertToSvg [sequences.GenericSequence]: 🗏 sequences/ConvertToSvg.yaml
+  ↓UploadDrawing [sequences.GenericSequence]: 🗏 sequences/UploadDrawing.yaml
+  ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
+    urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
   ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 
     comment: ngx builder template
     projectName: mobilebuilder_tpl_8_0_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_0_0_ngx.zip

@@ -40,7 +40,7 @@ title: First page
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:TEST
+            - MobileSmartSourceType: plain:CAD Viewerdemo NIJI
     ↓ButtonSet2 [ngx.components.UIDynamicElement-1588170811054]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       tagName: ion-buttons
@@ -56,6 +56,16 @@ title: First page
   tagName: ion-content
   ↓UseSharedComponent [ngx.components.UIUseShared-1650728564882]: 
     sharedcomponent: lib_CadViewer.Application.NgxApp.CadViewer
+    ↓svgDrawingURL [ngx.components.UIUseVariable-1651079747179]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:this['imgCache']['hq17_.dwg/hq17_.dwg.svg']
+  ↓Image [ngx.components.UIDynamicElement-1651078605116]: 
+    beanData: '{"ionBean":"Image","url":"script:this[''imgCache''][''hq17_.dwg\/hq17_.dwg.svg'']\r\n"}'
+    isEnabled: false
+    selfClose: true
+    tagName: img
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
@@ -85,3 +95,25 @@ title: First page
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Action 2
+↓PageEvent [ngx.components.UIPageEvent-1651067739995]: 
+  ↓GetAttachmentUrl [ngx.components.UICustomAction-1651068890082]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            			console.log(vars['drawingName']);
+            			console.log(vars['database']);
+            			let url = page.getAttachmentUrl(vars['drawingName'], vars['drawingName'] + ".svg", null, vars['database'])
+            			resolve(url);
+            
+    ↓drawingName [ngx.components.UIControlVariable-1651251243246]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:this.navParams.data
+    ↓database [ngx.components.UIControlVariable-1651251521372]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'lib_CadViewer.lib_cadviewer_fullsync'
