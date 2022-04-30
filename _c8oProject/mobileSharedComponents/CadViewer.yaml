@@ -1,15 +1,18 @@
 comment: |
-  The CADViewer component is based on CADViewer  https://www.cadviewer.com/ 
-  This component needs a Backend Server you can run using docker.
+  'The OffLine CADViewer component is based on CADViewer  https://www.cadviewer.com/ 
   
-  use :
+  This component wil display and enable to annotate drawings from a fullsync database. Before using this compoent, you must insert drawings in the FS database using the :
   
-  docker run --name CADVIEWER  -p 38080:80 cadviewer/cadviewer-full-server
+  - UploadDrawing sequence
   
-  To run a server listening on port 38080. You will have to configure the compoennt property to match the Server's URL.
+  The Drawings will be converted to the correct SVG format and Stored as attachements in the database.
+  
+  On the client side, you  sould sync the data to you device and use the CADViewer component providing the database name and the drawing name
   
   
   
+  
+  '
 scriptContent: 
   - xmlizable: 
     - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -578,6 +581,7 @@ scriptContent:
         		console.log("***** NG on Chnage ****")
         		console.log(changes);
         		
+        		/*
         		if (changes.svgDrawingURL.firstChange == false) {
         			if (changes.svgDrawingURL.currentValue[''changingThisBreaksApplicationSecurity'']) {
         				this.convertToFile(this.svgDrawingURL.changingThisBreaksApplicationSecurity).then((data: Blob)=> {
@@ -599,6 +603,33 @@ scriptContent:
         				})
         			}		
         		}
+        		*/
+        		
+        		
+        		this.c8o.get_attachment(
+        			this.drawing,
+        			this.drawing + ".svg",
+        			this.database
+        		).then((attachement)=>{
+        			var reader = new FileReader();
+        			reader.onloadend = function () {
+        			   let base64data = reader.result;
+        			   let sData = base64data.toString()
+        			   sData = atob(sData.substring(sData.indexOf('','') +1)),
+        			   console.log("base64 : " + sData);
+        			   
+        			   cadviewer.cvjs_LoadDrawing_SVG_string(
+        					"floorPlan",
+        					sData,
+        					"test.svg",
+        					false
+        			   )
+        			}
+        			reader.readAsDataURL(attachement);
+        		}).catch((err) => {
+        			console.error(err);
+        		})
+        		
         		/*End_c8o_CompChanges*/
         /*Begin_c8o_CompDoCheck*/
         		/*End_c8o_CompDoCheck*/
@@ -1506,4 +1537,7 @@ scriptContent:
     
     <div id="floorPlan">
     </div>'
-↓svgDrawingURL [ngx.components.UICompVariable-1651067663126]: 
+↓database [ngx.components.UICompVariable-1651324679567]: 
+  comment: the Fullsync databse name to get drawings from
+↓drawing [ngx.components.UICompVariable-1651324712990]: 
+  comment: The drawing name to display

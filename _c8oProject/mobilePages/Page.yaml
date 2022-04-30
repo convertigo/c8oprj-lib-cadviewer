@@ -1,4 +1,3 @@
-↑isRoot: true
 comment: My First Page as root page
 preloadPriority: high
 scriptContent: 
@@ -16,7 +15,7 @@ scriptContent:
         	/*End_c8o_PageFunction*/
         
 segment: path-to-xfirst
-title: First page
+title: CADViewer
 ↓Header [ngx.components.UIDynamicElement-1491634212350]: 
   beanData: '{"ionBean":"Header"}'
   comment: Page header
@@ -54,13 +53,6 @@ title: First page
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
-  ↓UseSharedComponent [ngx.components.UIUseShared-1650728564882]: 
-    sharedcomponent: lib_CadViewer.Application.NgxApp.CadViewer
-    ↓svgDrawingURL [ngx.components.UIUseVariable-1651079747179]: 
-      varValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:this['imgCache']['hq17_.dwg/hq17_.dwg.svg']
   ↓Image [ngx.components.UIDynamicElement-1651078605116]: 
     beanData: '{"ionBean":"Image","url":"script:this[''imgCache''][''hq17_.dwg\/hq17_.dwg.svg'']\r\n"}'
     isEnabled: false
@@ -111,7 +103,7 @@ title: First page
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:this.navParams.data
+          - MobileSmartSourceType: script:this.navParams.data['drawing']
     ↓database [ngx.components.UIControlVariable-1651251521372]: 
       varValue: 
         - xmlizable: 

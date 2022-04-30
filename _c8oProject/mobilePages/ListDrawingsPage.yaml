@@ -1,5 +1,6 @@
+↑isRoot: true
 segment: path-to-listdrawingspage
-title: Title for ListDrawingsPage
+title: ListDrawingsPage
 ↓Header [ngx.components.UIDynamicElement-1651250714636]: 
   beanData: '{"ionBean":"Header"}'
   comment: Page header
@@ -36,40 +37,64 @@ title: Title for ListDrawingsPage
 ↓Content [ngx.components.UIDynamicElement-1651250726055]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
-  ↓ListContainer [ngx.components.UIDynamicElement-1651250740712]: 
-    beanData: '{"ionBean":"List"}'
-    tagName: ion-list
-    ↓Directive [ngx.components.UIControlDirective-1651250740722]: 
-      directiveIndexName: idx
-      directiveItemName: item
-      directiveSource: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: source:{"filter":"Database","project":"lib_CadViewer","input":"","model":{"data":[{"includeDocs":false,"connector":"lib_CadViewer.lib_cadviewer_fullsync","document":"lib_CadViewer.lib_cadviewer_fullsync.Design_document","queryview":"drawings","verb":"view","marker":""}],"path":"?.rows","prefix":"","suffix":"","custom":"","useCustom":false}}
-      ↓ListItem [ngx.components.UIDynamicElement-1651250740724]: 
-        beanData: |
-          '{
-           "ionBean": "ListItem",
-           "Button": "plain:true",
-           "Detail": "plain:true"
-          }'
-        tagName: ion-item
-        ↓Label [ngx.components.UIDynamicElement-1651250740726]: 
-          beanData: '{"ionBean":"Label"}'
-          tagName: ion-label
-          ↓Text [ngx.components.UIText-1651250740728]: 
-            textValue: 
+  ↓Grid [ngx.components.UIDynamicElement-1651326464524]: 
+    beanData: '{"ionBean":"Grid"}'
+    tagName: ion-grid
+    ↓GridRow [ngx.components.UIDynamicElement-1651326464526]: 
+      beanData: '{"ionBean":"GridRow"}'
+      tagName: ion-row
+      ↓GridCol [ngx.components.UIDynamicElement-1651326464528]: 
+        beanData: '{"ionBean":"GridCol","Size":"plain:4"}'
+        tagName: ion-col
+        ↓ListContainer [ngx.components.UIDynamicElement-1651250740712]: 
+          beanData: '{"ionBean":"List"}'
+          tagName: ion-list
+          ↓Directive [ngx.components.UIControlDirective-1651250740722]: 
+            directiveIndexName: idx
+            directiveItemName: item
+            directiveSource: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_CadViewer","input":"","model":{"data":[{"priority":1651250740722}],"path":"?.value?.drawing?.name","prefix":"","suffix":"","custom":"","useCustom":false}}
-        ↓Event [ngx.components.UIControlEvent-1651251097652]: 
-          ↓PushPage [ngx.components.UIDynamicAction-1651251105410]: 
-            beanData: |
-              '{
-               "ionBean": "PushPageAction",
-               "page": "plain:lib_CadViewer.Application.NgxApp.Page",
-               "data": "source:{\"filter\":\"Iteration\",\"project\":\"lib_CadViewer\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1651250740722}],\"path\":\"?.value?.drawing?.name\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
-              }'
+                - MobileSmartSourceType: source:{"filter":"Database","project":"lib_CadViewer","input":"","model":{"data":[{"includeDocs":false,"connector":"lib_CadViewer.lib_cadviewer_fullsync","document":"lib_CadViewer.lib_cadviewer_fullsync.Design_document","queryview":"drawings","verb":"view","marker":""}],"path":"?.rows","prefix":"","suffix":"","custom":"","useCustom":false}}
+            ↓ListItem [ngx.components.UIDynamicElement-1651250740724]: 
+              beanData: |
+                '{
+                 "ionBean": "ListItem",
+                 "Button": "plain:true",
+                 "Detail": "plain:true"
+                }'
+              tagName: ion-item
+              ↓Label [ngx.components.UIDynamicElement-1651250740726]: 
+                beanData: '{"ionBean":"Label"}'
+                tagName: ion-label
+                ↓Text [ngx.components.UIText-1651250740728]: 
+                  textValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_CadViewer","input":"","model":{"data":[{"priority":1651250740722}],"path":"?.value?.drawing?.name","prefix":"","suffix":"","custom":"","useCustom":false}}
+              ↓Event [ngx.components.UIControlEvent-1651251097652]: 
+                ↓SetLocal [ngx.components.UIDynamicAction-1651326588796]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetLocalAction",
+                     "Property": "plain:drawingName",
+                     "Value": "source:{\"filter\":\"Iteration\",\"project\":\"lib_CadViewer\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1651250740722}],\"path\":\"?.value?.drawing?.name\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                    }'
+      ↓GridCol1 [ngx.components.UIDynamicElement-1651326464534]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓UseSharedComponent [ngx.components.UIUseShared-1650728564882]: 
+          sharedcomponent: lib_CadViewer.Application.NgxApp.CadViewer
+          ↓database [ngx.components.UIUseVariable-1651324736586]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:lib_cadviewer_fullsync
+          ↓drawing [ngx.components.UIUseVariable-1651324736588]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:this.local?.drawingName
 ↓PageEvent [ngx.components.UIPageEvent-1651250752291]: 
   ↓QueryView [ngx.components.UIDynamicAction-1651250772137]: 
     beanData: |
