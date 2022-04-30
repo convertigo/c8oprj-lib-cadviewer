@@ -1355,35 +1355,6 @@ scriptContent:
             - com.twinsoft.convertigo.beans.common.XMLVector: 
               - java.lang.String: 
                 - ↑value: '{ "glob": "**/*", "input": "node_modules/cadviewer/app", "output": "assets/cadviewer/app" }'
-    build_styles: 
-      - xmlizable: 
-        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-        - com.twinsoft.convertigo.beans.common.XMLVector: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - java.lang.String: 
-                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/bootstrap.min.css
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - java.lang.String: 
-                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/jquery.qtip.min.css
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - java.lang.String: 
-                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/jquery-ui-1.11.4.min.css
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - java.lang.String: 
-                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/bootstrap-multiselect.css
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - java.lang.String: 
-                - ↑value: ../../DisplayObjects/mobile/assets/cadviewer/app/css/cvjs_6.5.css
     package_dependencies: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
@@ -1402,6 +1373,13 @@ scriptContent:
                 - ↑value: popper.js
               - java.lang.String: 
                 - ↑value: 1.14.3
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: string-replace-loader
+              - java.lang.String: 
+                - ↑value: 3.1.0
     page_ts_imports: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
@@ -1440,11 +1418,11 @@ scriptContent:
       - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
       - com.twinsoft.convertigo.beans.common.FormatedContent: 
         →: |
-          '#floorplan {
+          '#floorPlan {
               height: 100%;  
           }
           
-          #floorplan{
+          #floorPlan{
               width: 100%;  
           	float: left;
           }'

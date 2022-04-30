@@ -299,3 +299,15 @@ tplProjectName: lib_CadViewer
            "Property": "plain:imgUrl",
            "Value": "script:out"
           }'
+↓CADViewerStyles [ngx.components.UIStyle-1651313364796]: 
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '@import ''~cadviewer/app/css/bootstrap.min.css'';
+          @import ''~cadviewer/app/css/jquery.qtip.min.css'';
+          @import ''~cadviewer/app/css/jquery-ui-1.11.4.min.css'';
+          @import ''~cadviewer/app/css/bootstrap-multiselect.css'';
+          @import ''~cadviewer/app/css/cvjs_6.5.css'';
+          '

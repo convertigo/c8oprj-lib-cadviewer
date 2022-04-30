@@ -63,7 +63,6 @@ title: Title for ListDrawingsPage
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_CadViewer","input":"","model":{"data":[{"priority":1651250740722}],"path":"?.value?.drawing?.name","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓Event [ngx.components.UIControlEvent-1651251097652]: 
-          attrName: (click)
           ↓PushPage [ngx.components.UIDynamicAction-1651251105410]: 
             beanData: |
               '{

@@ -1,6 +1,6 @@
 const webpack = require('webpack'); //to access built-in plugins
  
-console.log("!!!! Extra web pack config enabled !!!");
+console.log("!!!! Extra web pack config enabled for CAD Veiwer !!!");
 
 var oldMessage ="";
 
