@@ -155,8 +155,8 @@ comment: Upload & Converts a DWG drawing to SVG, then stores it ion the database
           - java.lang.String: 
             - ↑value: ./text()
 ↓DeleteInputFile [steps.DeleteStep-1651064856056]: 
-  sourcePath: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf("\\") +1 )'
+  sourcePath: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf(sep) +1 )'
 ↓DeleteOutputFile [steps.DeleteStep-1651064905632]: 
-  sourcePath: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf("\\") +1 ) + ".svg"'
+  sourcePath: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf(sep) +1 ) + ".svg"'
 ↓drawingFile [variables.RequestableVariable-1651063455602]: 
   isFileUpload: true

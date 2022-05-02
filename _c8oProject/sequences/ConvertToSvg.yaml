@@ -12,7 +12,7 @@ comment: Uses the AX Converter to Convert DWG drwings to SVG
       executionDirectory: .//axconverter/windows
   ↓jElse [steps.ElseStep-1651350003650]: 
     ↓Process_execute [steps.ProcessExecStep-1651350066639]: 
-      commandLine: '"bash -c chmod +x ./ax2023_L64_23_02_78; ./ax2023_L64_23_02_78 -i=\"../../data/" + input +  "\" -o=\"../../data/" + output + "\""'
+      commandLine: '[''bash'',  ''-c'',  "chmod +x ./ax2023_L64_23_02_78; ./ax2023_L64_23_02_78 -i=\"../../data/" + input +  "\" -o=\"../../data/" + output + "\" "]'
       executionDirectory: .//axconverter/linux
 ↓input [variables.RequestableVariable-1651047000788]: 
   comment: The input file (relative to the project/data directory)
