@@ -1,5 +1,5 @@
 {
-  "name": "PWA Application",
+  "name": "CadViewer Application",
   "short_name": "PWA App",
   "start_url": "../index.html",
   "display": "standalone",

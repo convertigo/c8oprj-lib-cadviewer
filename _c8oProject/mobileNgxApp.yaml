@@ -62,6 +62,7 @@ componentScriptContent:
         /*Begin_c8o_AppFunction*/
         	/*End_c8o_AppFunction*/
         '
+isPWA: true
 tplProjectName: lib_CadViewer
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
 ↓CadViewer [ngx.components.UISharedRegularComponent-1650728537529]: 🗏 mobileSharedComponents/CadViewer.yaml
@@ -310,4 +311,9 @@ tplProjectName: lib_CadViewer
           @import ''~cadviewer/app/css/jquery-ui-1.11.4.min.css'';
           @import ''~cadviewer/app/css/bootstrap-multiselect.css'';
           @import ''~cadviewer/app/css/cvjs_6.5.css'';
+          
+          .CADViewerTestButtons {
+          	background-color: lightgray !important;
+          	color: rgb(0, 0, 128) !important;
+          }
           '

@@ -577,38 +577,11 @@ scriptContent:
         	    
         		/*End_c8o_CompFinalization*/
         /*Begin_c8o_CompChanges*/
-        		
-        		console.log("***** NG on Chnage ****")
-        		console.log(changes);
-        		
-        		/*
-        		if (changes.svgDrawingURL.firstChange == false) {
-        			if (changes.svgDrawingURL.currentValue[''changingThisBreaksApplicationSecurity'']) {
-        				this.convertToFile(this.svgDrawingURL.changingThisBreaksApplicationSecurity).then((data: Blob)=> {
-        					var reader = new FileReader();
-        					reader.onloadend = function () {
-        					   let base64data = reader.result;
-        					   let sData = base64data.toString()
-        					   sData = atob(sData.substring(sData.indexOf('','') +1)),
-        					   console.log("base64 : " + sData);
-        					   
-        					   cadviewer.cvjs_LoadDrawing_SVG_string(
-        							"floorPlan",
-        							sData,
-        							"test.svg",
-        							false
-        					   )
-        					}
-        					reader.readAsDataURL(data);
-        				})
-        			}		
-        		}
-        		*/
-        		
         		if (this.drawing != undefined) {
+        			let drawingNameSvg = this.drawing + ".svg"
         			this.c8o.get_attachment(
         				this.drawing,
-        				this.drawing + ".svg",
+        				drawingNameSvg,
         				this.database
         			).then((attachement)=>{
         				var reader = new FileReader();
@@ -621,7 +594,7 @@ scriptContent:
         				   cadviewer.cvjs_LoadDrawing_SVG_string(
         						"floorPlan",
         						sData,
-        						"test.svg",
+        						drawingNameSvg,
         						false
         				   )
         				}
@@ -1533,8 +1506,7 @@ scriptContent:
             </tr>
     </table>
     <br>
-    -->      
-    
+    -->
     <div id="floorPlan">
     </div>'
 ↓database [ngx.components.UICompVariable-1651324679567]: 
