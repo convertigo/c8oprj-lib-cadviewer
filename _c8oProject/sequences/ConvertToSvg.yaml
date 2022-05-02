@@ -1,7 +1,19 @@
 comment: Uses the AX Converter to Convert DWG drwings to SVG
-↓Process_execute [steps.ProcessExecStep-1651046811060]: 
-  commandLine: '"cmd /c AX2023_W64_23_02_78.exe -i=\"../../data/" + input +  "\" -o=\"../../data/" + output + "\""'
-  executionDirectory: .//axconverter/windows
+↓CheckPlatform [steps.SimpleStep-1651349649544]: 
+  expression: |
+    'bWindows  = (java.lang.System.getProperty("os.name") + "").toLowerCase().indexOf("windows") != -1? true :false
+    log.warn("Running on a Windows platfrom : " + bWindows);
+    '
+↓jIfThenElse [steps.IfThenElseStep-1651350003646]: 
+  condition: bWindows
+  ↓jThen [steps.ThenStep-1651350003648]: 
+    ↓Process_execute1 [steps.ProcessExecStep-1651350056750]: 
+      commandLine: '"cmd /c AX2023_W64_23_02_78.exe -i=\"../../data/" + input +  "\" -o=\"../../data/" + output + "\""'
+      executionDirectory: .//axconverter/windows
+  ↓jElse [steps.ElseStep-1651350003650]: 
+    ↓Process_execute [steps.ProcessExecStep-1651350066639]: 
+      commandLine: '"bash -c chmod +x ./ax2023_L64_23_02_78; ./ax2023_L64_23_02_78 -i=\"../../data/" + input +  "\" -o=\"../../data/" + output + "\""'
+      executionDirectory: .//axconverter/linux
 ↓input [variables.RequestableVariable-1651047000788]: 
   comment: The input file (relative to the project/data directory)
 ↓output [variables.RequestableVariable-1651047010560]: 

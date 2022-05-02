@@ -605,31 +605,31 @@ scriptContent:
         		}
         		*/
         		
-        		
-        		this.c8o.get_attachment(
-        			this.drawing,
-        			this.drawing + ".svg",
-        			this.database
-        		).then((attachement)=>{
-        			var reader = new FileReader();
-        			reader.onloadend = function () {
-        			   let base64data = reader.result;
-        			   let sData = base64data.toString()
-        			   sData = atob(sData.substring(sData.indexOf('','') +1)),
-        			   console.log("base64 : " + sData);
-        			   
-        			   cadviewer.cvjs_LoadDrawing_SVG_string(
-        					"floorPlan",
-        					sData,
-        					"test.svg",
-        					false
-        			   )
-        			}
-        			reader.readAsDataURL(attachement);
-        		}).catch((err) => {
-        			console.error(err);
-        		})
-        		
+        		if (this.drawing != undefined) {
+        			this.c8o.get_attachment(
+        				this.drawing,
+        				this.drawing + ".svg",
+        				this.database
+        			).then((attachement)=>{
+        				var reader = new FileReader();
+        				reader.onloadend = function () {
+        				   let base64data = reader.result;
+        				   let sData = base64data.toString()
+        				   sData = atob(sData.substring(sData.indexOf('','') +1)),
+        				   console.log("base64 : " + sData);
+        				   
+        				   cadviewer.cvjs_LoadDrawing_SVG_string(
+        						"floorPlan",
+        						sData,
+        						"test.svg",
+        						false
+        				   )
+        				}
+        				reader.readAsDataURL(attachement);
+        			}).catch((err) => {
+        				console.error(err);
+        			})
+        		}		
         		/*End_c8o_CompChanges*/
         /*Begin_c8o_CompDoCheck*/
         		/*End_c8o_CompDoCheck*/

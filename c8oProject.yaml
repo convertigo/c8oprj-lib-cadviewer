@@ -2,6 +2,7 @@
 ↓lib_CadViewer [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: '*'
+  version: 1.0
   ↓lib_cadviewer_fullsync [connectors.FullSyncConnector]: 🗏 connectors/lib_cadviewer_fullsync.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓ConvertToSvg [sequences.GenericSequence]: 🗏 sequences/ConvertToSvg.yaml

@@ -1,5 +1,7 @@
 comment: Upload & Converts a DWG drawing to SVG, then stores it ion the database
 ↓Input_variables [steps.InputVariablesStep-1651063435695]: 
+↓GetSystemSeparator [steps.SimpleStep-1651351571370]: 
+  expression: sep = java.lang.System.getProperty("file.separator");
 ↓jUploadedFile [steps.SimpleSourceStep-1651063545345]: 
   sourceDefinition: 
     - xmlizable: 
@@ -16,13 +18,13 @@ comment: Upload & Converts a DWG drawing to SVG, then stores it ion the database
   overwrite: true
   sourcePath: jUploadedFile
 ↓jElement [steps.ElementStep-1651063923714]: 
-  expression: jUploadedFile.substring(jUploadedFile.lastIndexOf("\\") +1 )
+  expression: jUploadedFile.substring(jUploadedFile.lastIndexOf(sep) +1 )
   nodeName: input
 ↓jElement1 [steps.ElementStep-1651064056596]: 
-  expression: jUploadedFile.substring(jUploadedFile.lastIndexOf("\\")+1) + ".svg"
+  expression: jUploadedFile.substring(jUploadedFile.lastIndexOf(sep)+1) + ".svg"
   nodeName: ouput
 ↓jElement2 [steps.ElementStep-1651064631105]: 
-  expression: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf("\\")+1) + ".svg"'
+  expression: '".//data/" + jUploadedFile.substring(jUploadedFile.lastIndexOf(sep)+1) + ".svg"'
   nodeName: path
 ↓Call_Sequence [steps.SequenceStep-1651063742473]: 
   sourceSequence: lib_CadViewer.ConvertToSvg
