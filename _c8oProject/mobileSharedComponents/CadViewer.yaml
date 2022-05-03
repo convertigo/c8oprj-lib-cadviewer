@@ -153,12 +153,17 @@ scriptContent:
         function cvjs_saveStickyNotesRedlinesUser(){
         	// there are two modes, user handling of redlines
         	// alternatively use the build in redline file manager
-        	cadviewer.cvjs_openRedlineSaveModal("floorPlan");
+        	// cadviewer.cvjs_openRedlineSaveModal("floorPlan");
         	// custom method startMethodRed to set the name and location of redline to save
         	// see implementation below
-        	//startMethodRed();
+        	// startMethodRed();
         	// API call to save stickynotes and redlines
-        	//cvjs_saveStickyNotesRedlines("floorPlan");
+        	// cvjs_saveStickyNotesRedlines("floorPlan");
+        	
+        	
+        	cadviewer.cvjs_setStickyNoteRedlineUrl("test.js");
+        	cadviewer.cvjs_setStickyNoteSaveRedlineUrl("test.js");
+        	cadviewer.cvjs_saveStickyNotesRedlines("floorPlan");
         }
         
         
@@ -710,34 +715,7 @@ scriptContent:
         			  } 
         		  */
         		cadviewer.cvjs_debugMode(true);
-        
-        		//cadviewer.cvjs_setServerLocationURL(ServerLocation, ServerUrl);
-        		//cadviewer.cvjs_setServerBackEndUrl(ServerBackEndUrl);
-        		//cadviewer.cvjs_setHandlerSettings(''Angular'', "floorPlan");   // standard angular + nodejs
-        
-        
-        		// USER Controlled - 
-        		// cadviewer.cvjs_setHandlers_FrontEnd(''PHP'', ''Angular'', ''floorPlan'');
-        
-        		// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
-        		// FileName = ServerBackEndUrl+ "/content/drawings/dwg/BRA_Alta Vila_02_CkIn_06082020.dwg";
-        		// FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_2spaces.dwg";
-        			
-        		FileName = ServerBackEndUrl + "/content/drawings/dwg/hq17_.dwg";
-        
-        		try {
-        			FileName = params.url;
-        			tempArray = params.Seats;
-        			console.log(''tempArray'', tempArray)
-        			// param.Seats contains Array with space
-        			// this must be changes into the proper array structure with the attribute Objec
-        		} catch (err) {
-        			//mySpaceArray = [{space: "02.288"},{space: "02.289"},{space: "02.290"}];
-        			//FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_2spaces.dwg";	
-        			//FileName = ServerBackEndUrl+ "/content/drawings/dwg/BRA_Alta Vila_02_CkIn_06082020.dwg";
-        			FileName = ServerBackEndUrl + "/content/drawings/dwg/hq17_.dwg";
-        		}
-        
+        		
         		cadviewer.cvjs_setCallbackMethod("cvjs_OnLoadEnd", cvjs_OnLoadEnd);
         		cadviewer.cvjs_setCallbackMethod("cvjs_graphicalObjectOnChange", cvjs_graphicalObjectOnChange);
         		cadviewer.cvjs_setCallbackMethod("cvjs_OnLoadEndRedlines", cvjs_OnLoadEndRedlines);
@@ -787,13 +765,14 @@ scriptContent:
         		cadviewer.cvjs_CADViewerPro(true);
         
         		// Pass over the location of the installation, will update the internal paths
-        		cadviewer.cvjs_setServerLocationURL(ServerLocation, ServerUrl);
+        		// cadviewer.cvjs_setServerLocationURL(ServerLocation, ServerUrl);
+        		
         		cadviewer.cvjs_PrintToPDFWindowRelativeSize(0.8);
         		cadviewer.cvjs_setFileModalEditMode(false);
         
         		// For "Merge DWG" / "Merge PDF" commands, set up the email server to send merged DWG files or merged PDF files with redlines/interactive highlight.
         		// See php / xampp documentation on how to prepare your server
-        		cadviewer.cvjs_emailSettings_PDF_publish("From CAD Server", "my_from_address@mydomain.com", "my_cc_address@mydomain.com", "my_reply_to@mydomain.com");
+        		// cadviewer.cvjs_emailSettings_PDF_publish("From CAD Server", "my_from_address@mydomain.com", "my_cc_address@mydomain.com", "my_reply_to@mydomain.com");
         
         		// CHANGE LANGUAGE - DEFAULT IS ENGLISH
         		// cadviewer.cvjs_loadCADViewerLanguage("English", ServerUrl+"/assets/cadviewer/app/cv/cv-pro/language_table/cadviewerProLanguage.xml");
@@ -808,8 +787,7 @@ scriptContent:
         		//    cadviewer.cvjs_displayTopNavigationBar(false, "floorPlan");  // disable top navigation bar
         		// 3: Users can change the number of top menu icon pages and the content of pages, based on a configuration file in folder /cadviewer/app/js/menu_config/
         		cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml");
-        		// cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml", "/assets/cadviewer/app/cv/cv-pro/menu_config/");
-        
+        		// cadviewer.cvjs_setTopMenuXML("floorPlan", "iconbar.xml", "assets/cadviewer/");
         
         		// Initialize CADViewer  - needs the div name on the svg element on page that contains CADViewerJS and the location of the
         		// main application "app" folder. It can be either absolute or relative
@@ -857,13 +835,9 @@ scriptContent:
         		);
         
         
-        		// For AngularJS we need a different setting of images, loading from /assets folder	
-        		//cadviewer.cvjs_InitCADViewer_app("floorPlan", ServerUrl+"app/", "assets/cadviewer/app/images/");
-        		//cadviewer.cvjs_InitCADViewer_app("floorPlan", "assets/cadviewer/app/");
-        
         
         		// set the location to license key, typically the js folder in main app application folder ../app/cv/
-        		//  cadviewer.cvjs_setLicenseKeyPath("/assets/cadviewer/app/cv/");
+        		// cadviewer.cvjs_setLicenseKeyPath("/assets/cadviewer/app/cv/");
         		// alternatively, set the key directly, by pasting in the cvKey portion of the cvlicense.js file, note the JSON \" around all entities 	 
         		cadviewer.cvjs_setLicenseKeyDirect(''{ \"cvKey\": \"00110010 00110010 00110000 00110010 00110010 00110000 00110010 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110111 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110011 00110010 00110001 00110001 00110010 00110000 00110101 00110010 00110000 00111000 \" }'');
         
@@ -876,13 +850,13 @@ scriptContent:
         		// Set the icon interface to include image handling
         		// cadviewer.cvjs_setIconInterfaceControls_ImageInsert();
         
-        		cadviewer.cvjs_allowFileLoadToServer(true);
+        		cadviewer.cvjs_allowFileLoadToServer(false);
         
         		//		cadviewer.cvjs_setUrl_singleDoubleClick(1);
         		//		cadviewer.cvjs_encapsulateUrl_callback(true);
         
         		// NOTE BELOW: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES
-        		cadviewer.cvjs_setRedlinesAbsolutePath(ServerUrl + ''/content/redlines/fileloader_610/'', ServerLocation + ''/content/redlines/fileloader_610/'');
+        		// cadviewer.cvjs_setRedlinesAbsolutePath(ServerUrl + ''/content/redlines/fileloader_610/'', ServerLocation + ''/content/redlines/fileloader_610/'');
         
         		// NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES
         
@@ -931,9 +905,6 @@ scriptContent:
         
         		// set maximum CADViewer canvas side
         		cadviewer.cvjs_resizeWindow_position("floorPlan");
-        		// alternatively set a fixed CADViewer canvas size
-        		//	cadviewer.cvjs_resizeWindow_fixedSize(800, 600, "floorPlan");		
-        
         		isCADViewerInitializedInAngular = true;
         	}
         	     

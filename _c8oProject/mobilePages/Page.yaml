@@ -53,11 +53,6 @@ title: CADViewer
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
-  ↓Image [ngx.components.UIDynamicElement-1651078605116]: 
-    beanData: '{"ionBean":"Image","url":"script:this[''imgCache''][''hq17_.dwg\/hq17_.dwg.svg'']\r\n"}'
-    isEnabled: false
-    selfClose: true
-    tagName: img
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
