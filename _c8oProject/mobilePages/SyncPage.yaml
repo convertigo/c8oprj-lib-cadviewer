@@ -1,3 +1,4 @@
+inAutoMenu: false
 segment: path-to-syncpage
 title: Title for SyncPage
 ↓Content [ngx.components.UIDynamicElement-1651661223614]: 
@@ -15,7 +16,7 @@ title: Title for SyncPage
     beanData: '{"ionBean":"FormatLayout","TextAlignment":"plain:ion-text-center"}'
     selfClose: false
   ↓ProgressBar [ngx.components.UIDynamicElement-1651661634671]: 
-    beanData: '{"ionBean":"ProgressBar","Value":"source:{\"filter\":\"Global\",\"project\":\"lib_CadViewer\",\"input\":\"\",\"model\":{\"data\":[{\"sharedObject\":\"router.sharedObject\"}],\"path\":\"?.FullSyncSyncAction?.progress?.current\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+    beanData: '{"ionBean":"ProgressBar","Value":"source:{\"filter\":\"Global\",\"project\":\"lib_CadViewer\",\"input\":\"\",\"model\":{\"data\":[{\"sharedObject\":\"router.sharedObject\"}],\"path\":\"?.FullSyncSyncAction?.progress?.total\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
     tagName: ion-progress-bar
   ↓TextItem [ngx.components.UIDynamicElement-1651661730311]: 
     beanData: '{"ionBean":"TextItem"}'

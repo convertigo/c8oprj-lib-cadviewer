@@ -1,4 +1,5 @@
 comment: My First Page as root page
+inAutoMenu: false
 preloadPriority: high
 scriptContent: 
   - xmlizable: 

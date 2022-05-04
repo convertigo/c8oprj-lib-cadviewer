@@ -6,7 +6,7 @@ title: ListDrawingsPage
   comment: Page header
   tagName: ion-header
   ↓ToolBar [ngx.components.UIDynamicElement-1651250714639]: 
-    beanData: '{"ionBean":"ToolBar"}'
+    beanData: '{"ionBean":"ToolBar","IonColor":"plain:primary"}'
     tagName: ion-toolbar
     ↓ButtonSet1 [ngx.components.UIDynamicElement-1651250714642]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'

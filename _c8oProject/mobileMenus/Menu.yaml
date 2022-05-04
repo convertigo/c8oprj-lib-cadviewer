@@ -5,7 +5,7 @@ tagName: ion-menu
   beanData: '{"ionBean":"Header"}'
   tagName: ion-header
   ↓ToolBar [ngx.components.UIDynamicElement-1500890731485]: 
-    beanData: '{"ionBean":"ToolBar"}'
+    beanData: '{"ionBean":"ToolBar","IonColor":"plain:primary"}'
     tagName: ion-toolbar
     ↓BarTitle [ngx.components.UIDynamicElement-1500890752959]: 
       beanData: '{"ionBean":"BarTitle"}'
@@ -14,7 +14,7 @@ tagName: ion-menu
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:My Menu
+            - MobileSmartSourceType: plain:CADViewer Demo
 ↓Content [ngx.components.UIDynamicElement-1500890742326]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content

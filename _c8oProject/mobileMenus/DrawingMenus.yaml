@@ -4,7 +4,7 @@ tagName: ion-menu
   beanData: '{"ionBean":"Header"}'
   tagName: ion-header
   ↓ToolBar [ngx.components.UIDynamicElement-1651659122905]: 
-    beanData: '{"ionBean":"ToolBar"}'
+    beanData: '{"ionBean":"ToolBar","IonColor":"plain:primary"}'
     tagName: ion-toolbar
     ↓BarTitle [ngx.components.UIDynamicElement-1651659122908]: 
       beanData: '{"ionBean":"BarTitle"}'
