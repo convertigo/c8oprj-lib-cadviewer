@@ -1,0 +1,27 @@
+segment: path-to-syncpage
+title: Title for SyncPage
+↓Content [ngx.components.UIDynamicElement-1651661223614]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓H1 [ngx.components.UIDynamicElement-1651661404707]: 
+    beanData: '{"ionBean":"Heading1"}'
+    tagName: h1
+    ↓Text [ngx.components.UIText-1651661404709]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Syncing data from the server
+  ↓FormatLayout [ngx.components.UIDynamicAttr-1651661412644]: 
+    beanData: '{"ionBean":"FormatLayout","TextAlignment":"plain:ion-text-center"}'
+    selfClose: false
+  ↓ProgressBar [ngx.components.UIDynamicElement-1651661634671]: 
+    beanData: '{"ionBean":"ProgressBar","Value":"source:{\"filter\":\"Global\",\"project\":\"lib_CadViewer\",\"input\":\"\",\"model\":{\"data\":[{\"sharedObject\":\"router.sharedObject\"}],\"path\":\"?.FullSyncSyncAction?.progress?.current\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+    tagName: ion-progress-bar
+  ↓TextItem [ngx.components.UIDynamicElement-1651661730311]: 
+    beanData: '{"ionBean":"TextItem"}'
+    tagName: ion-text
+    ↓Text [ngx.components.UIText-1651661730313]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Global","project":"lib_CadViewer","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.FullSyncSyncAction?.progress?.total","prefix":"","suffix":"","custom":"","useCustom":false}}

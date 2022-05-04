@@ -69,6 +69,7 @@ tplProjectName: lib_CadViewer
 ↓CadViewer [ngx.components.UISharedRegularComponent-1650728537529]: 🗏 mobileSharedComponents/CadViewer.yaml
 ↓Page [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
 ↓ListDrawingsPage [ngx.components.PageComponent-1651250668801]: 🗏 mobilePages/ListDrawingsPage.yaml
+↓SyncPage [ngx.components.PageComponent-1651661211797]: 🗏 mobilePages/SyncPage.yaml
 ↓Style [ngx.components.UIStyle-1491635462437]: 
   comment: You can add some global application styles here
   styleContent: 
@@ -283,24 +284,12 @@ tplProjectName: lib_CadViewer
           '
 ↓AppEvent [ngx.components.UIAppEvent-1651065412836]: 
   appEvent: onNetworkReachable
+  ↓ModalPage [ngx.components.UIDynamicAction-1651661471506]: 
+    beanData: '{"ionBean":"ModalAction","page":"plain:lib_CadViewer.Application.NgxApp.SyncPage"}'
   ↓SyncData [ngx.components.UIDynamicAction-1651250695922]: 
     beanData: '{"ionBean":"FullSyncSyncAction","requestable":"plain:lib_CadViewer.lib_cadviewer_fullsync"}'
-    ↓GetAttachmentUrl [ngx.components.UICustomAction-1651250695925]: 
-      actionValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-          - com.twinsoft.convertigo.beans.common.FormatedContent: 
-            →: |
-              			let url = page.getAttachmentUrl("hq17_.dwg", "hq17_.dwg.svg", null, "lib_cadviewer_fullsync")
-              			resolve(url);
-              
-      ↓SetLocal [ngx.components.UIDynamicAction-1651250695928]: 
-        beanData: |
-          '{
-           "ionBean": "SetLocalAction",
-           "Property": "plain:imgUrl",
-           "Value": "script:out"
-          }'
+    ↓CloseModal [ngx.components.UIDynamicAction-1651661493589]: 
+      beanData: '{"ionBean":"CloseModalAction"}'
 ↓CADViewerStyles [ngx.components.UIStyle-1651313364796]: 
   styleContent: 
     - xmlizable: 
