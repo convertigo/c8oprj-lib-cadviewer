@@ -24,7 +24,7 @@ title: ListDrawingsPage
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:CAD Viewerdemo NIJI
+            - MobileSmartSourceType: plain:CADViewer Convertigo integration Demo
     ↓ButtonSet2 [ngx.components.UIDynamicElement-1651250714657]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       tagName: ion-buttons
@@ -105,7 +105,7 @@ title: ListDrawingsPage
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:this.local?.drawingName
+                - MobileSmartSourceType: source:{"filter":"Local","project":"lib_CadViewer","input":"","model":{"data":[{"localObject":"local"}],"path":"?.drawingName","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓PageEvent [ngx.components.UIPageEvent-1651250752291]: 
   ↓QueryView [ngx.components.UIDynamicAction-1651250772137]: 
     beanData: |
