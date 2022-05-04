@@ -65,6 +65,7 @@ componentScriptContent:
 isPWA: true
 tplProjectName: lib_CadViewer
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
+↓DrawingMenus [ngx.components.UIDynamicMenu-1651659098832]: 🗏 mobileMenus/DrawingMenus.yaml
 ↓CadViewer [ngx.components.UISharedRegularComponent-1650728537529]: 🗏 mobileSharedComponents/CadViewer.yaml
 ↓Page [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
 ↓ListDrawingsPage [ngx.components.PageComponent-1651250668801]: 🗏 mobilePages/ListDrawingsPage.yaml

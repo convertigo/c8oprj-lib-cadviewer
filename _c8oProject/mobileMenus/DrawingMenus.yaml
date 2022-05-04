@@ -1,0 +1,48 @@
+beanData: '{"ionBean":"Menu","MenuSide":"plain:end"}'
+tagName: ion-menu
+↓Header [ngx.components.UIDynamicElement-1651659122902]: 
+  beanData: '{"ionBean":"Header"}'
+  tagName: ion-header
+  ↓ToolBar [ngx.components.UIDynamicElement-1651659122905]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓BarTitle [ngx.components.UIDynamicElement-1651659122908]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [ngx.components.UIText-1651659122911]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Available Drawings
+↓Content [ngx.components.UIDynamicElement-1651659417874]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓ListContainer [ngx.components.UIDynamicElement-1651659426671]: 
+    beanData: '{"ionBean":"List"}'
+    tagName: ion-list
+    ↓Directive [ngx.components.UIControlDirective-1651659426674]: 
+      directiveIndexName: idx
+      directiveItemName: item
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Database","project":"lib_CadViewer","input":"","model":{"data":[{"includeDocs":false,"connector":"lib_CadViewer.lib_cadviewer_fullsync","document":"lib_CadViewer.lib_cadviewer_fullsync.Design_document","queryview":"drawings","verb":"view","marker":""}],"path":"?.rows","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓ListItem [ngx.components.UIDynamicElement-1651659426677]: 
+        beanData: '{"ionBean":"ListItem","Button":"plain:true"}'
+        tagName: ion-item
+        ↓Label [ngx.components.UIDynamicElement-1651659426680]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1651659426683]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_CadViewer","input":"","model":{"data":[{"priority":1651659426674}],"path":"?.value?.drawing?.name","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓Event [ngx.components.UIControlEvent-1651659426686]: 
+          ↓SetGlobal [ngx.components.UIDynamicAction-1651659562483]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:drawingName",
+               "Value": "source:{\"filter\":\"Iteration\",\"project\":\"lib_CadViewer\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1651659426674}],\"path\":\"?.value?.drawing?.name\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+              }'
