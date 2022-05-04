@@ -286,10 +286,10 @@ tplProjectName: lib_CadViewer
   appEvent: onNetworkReachable
   ↓ModalPage [ngx.components.UIDynamicAction-1651661471506]: 
     beanData: '{"ionBean":"ModalAction","page":"plain:lib_CadViewer.Application.NgxApp.SyncPage"}'
-  ↓SyncData [ngx.components.UIDynamicAction-1651250695922]: 
-    beanData: '{"ionBean":"FullSyncSyncAction","requestable":"plain:lib_CadViewer.lib_cadviewer_fullsync"}'
-    ↓CloseModal [ngx.components.UIDynamicAction-1651661493589]: 
-      beanData: '{"ionBean":"CloseModalAction"}'
+    ↓SyncData [ngx.components.UIDynamicAction-1651250695922]: 
+      beanData: '{"ionBean":"FullSyncSyncAction","requestable":"plain:lib_CadViewer.lib_cadviewer_fullsync"}'
+      ↓CloseModal [ngx.components.UIDynamicAction-1651661493589]: 
+        beanData: '{"ionBean":"CloseModalAction"}'
 ↓CADViewerStyles [ngx.components.UIStyle-1651313364796]: 
   styleContent: 
     - xmlizable: 
