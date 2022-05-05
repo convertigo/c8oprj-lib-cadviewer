@@ -47,4 +47,4 @@ jobs:
           -Pconvertigo.deploy.password=$C8O_PASSWORD \
           -Pconvertigo.load.mobileApplicationEndpoint=$C8O_SERVER \
           -Pconvertigo.compileMobileBuilder.mode=fast
-          
+          -Pconvertigo.generateMobileBuilder.mode=fast
