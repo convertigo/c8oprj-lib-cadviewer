@@ -15,6 +15,9 @@ This Componend is based on the CADViewer provided by tailormade.
 For more technical informations : [documentation](./project.md)
 
 - [Installation](#installation)
+- [Sequences](#sequences)
+    - [ConvertToSvg](#converttosvg)
+    - [UploadDrawing](#uploaddrawing)
 - [Mobile Library](#mobile-library)
     - [Shared Components](#shared-components)
         - [CadViewer](#cadviewer)
@@ -41,6 +44,41 @@ For more technical informations : [documentation](./project.md)
     </table>
 3. Click the `Finish` button. This will automatically import the __lib_CadViewer__ project
 
+
+## Sequences
+
+### ConvertToSvg
+
+Uses the AX Converter to Convert DWG drwings to SVG
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>input</td><td>The input file (relative to the project/data directory)</td>
+</tr>
+<tr>
+<td>output</td><td>The output file (relative to the project/data directory)</td>
+</tr>
+</table>
+
+### UploadDrawing
+
+Upload & Converts a DWG drawing to SVG, then stores it ion the database
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>drawingFile</td><td></td>
+</tr>
+</table>
 
 ## Mobile Library
 
