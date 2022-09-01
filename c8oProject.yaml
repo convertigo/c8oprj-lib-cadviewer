@@ -1,6 +1,13 @@
 ↑convertigo: 8.0.0.m006
 ↓lib_CadViewer [core.Project]: 
-  comment: Convertigo Mobile builder Project
+  comment: |
+    CADViewer component for Convertigo platform. This component can add 2D Plans and annotation features to your convertigo projects
+    
+    This Componend is based on the CADViewer provided by tailormade.
+    
+    (https://www.tailormade.com/products/cadviewer)
+    
+    
   corsOrigin: '*'
   version: 1.0
   ↓lib_cadviewer_fullsync [connectors.FullSyncConnector]: 🗏 connectors/lib_cadviewer_fullsync.yaml

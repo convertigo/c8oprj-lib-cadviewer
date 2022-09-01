@@ -1,3 +1,4 @@
+comment: A Sample app using the CADViewer component
 componentScriptContent: 
   - xmlizable: 
     - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
