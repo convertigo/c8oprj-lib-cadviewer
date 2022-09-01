@@ -183,12 +183,12 @@ The output file (relative to the project/data directory)
 
 </p></blockquote></details>
 
-<details><summary><b>UploadDrawing</b> : Upload & Converts a DWG drawing to SVG, then stores it ion the database</summary><blockquote><p>
+<details><summary><b>UploadDrawing</b> : Upload & Converts a DWG drawing to SVG, then stores it in the database</summary><blockquote><p>
 
 
 ## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") UploadDrawing
 
-Upload & Converts a DWG drawing to SVG, then stores it ion the database
+Upload & Converts a DWG drawing to SVG, then stores it in the database
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -206,7 +206,7 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/variables/images/variable_color_16x16.png?raw=true "  alt="RequestableVariable" >&nbsp;drawingFile
 </td>
 <td>
-
+The Drawing file in DWG format as a File Upload
 </td>
 </tr>
 </table>

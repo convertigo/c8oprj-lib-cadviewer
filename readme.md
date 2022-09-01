@@ -67,7 +67,7 @@ Uses the AX Converter to Convert DWG drwings to SVG
 
 ### UploadDrawing
 
-Upload & Converts a DWG drawing to SVG, then stores it ion the database
+Upload & Converts a DWG drawing to SVG, then stores it in the database
 
 **variables**
 
@@ -76,7 +76,7 @@ Upload & Converts a DWG drawing to SVG, then stores it ion the database
 <th>name</th><th>comment</th>
 </tr>
 <tr>
-<td>drawingFile</td><td></td>
+<td>drawingFile</td><td>The Drawing file in DWG format as a File Upload</td>
 </tr>
 </table>
 
